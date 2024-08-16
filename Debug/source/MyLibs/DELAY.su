@@ -1,0 +1,5 @@
+D:\codigos\MCU\TDII\TP1\CMSIS/core_cm0plus.h:850:22:__NVIC_SetPriority	24	static
+D:\codigos\MCU\TDII\TP1\CMSIS/core_cm0plus.h:1058:26:SysTick_Config	16	static
+../source/MyLibs/DELAY.c:22:6:SYSTICK_INIT	8	static
+../source/MyLibs/DELAY.c:27:6:SysTick_Handler	8	static
+../source/MyLibs/DELAY.c:31:6:delay_ms	16	static
