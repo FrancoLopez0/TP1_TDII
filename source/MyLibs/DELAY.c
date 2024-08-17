@@ -26,6 +26,7 @@ void SYSTICK_INIT(void){
 
 void SysTick_Handler(void){
 	flag_tick++;
+	time++;
 }
 
 void delay_ms(int final){

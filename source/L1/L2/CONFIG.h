@@ -26,7 +26,7 @@
 #define LED_R 2
 #define LED_B 1
 #define LED_G 0
-
+#define USER_BTN 4
 
 void CONFIG(void);
 
