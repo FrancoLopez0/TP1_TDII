@@ -9,8 +9,15 @@
 #define L1_APPLICATION_H_
 
 #include "L2/CONFIG.h"
+#include "TEMP.h"
+#include "TIME.h"
+#include "COMMUNICATION.h"
+#include "INDICATOR.h"
+#include "COM.h"
 
-void USART_TX(void);
 
 
+void APP(void);
+
+void callback_on_wait(void);
 #endif /* L1_APPLICATION_H_ */

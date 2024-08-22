@@ -17,20 +17,18 @@ void write_byte(uint8_t data){
 	while (!(USART1->STAT & 0x8));
 }
 
-void usart1_write(uint8_t *p){
+void usart1_write(char *p){
+
 	while(*p != 0){
 		USART_WriteByte(USART1, *(p++));
 		while (!(USART1->STAT & USART_STAT_TXIDLE_MASK));
 	}
+
 }
 
-void USART1_IRQHandler(void){
-	aux = USART_ReadByte(USART1);
-	if(aux != END_TX){
-		buff_data_usart[counter] = aux;
-		counter++;
-	}
-	if(aux == END_TX && counter>0){
-		flagReceived = 1;
+void clean_buffer(void){
+	for(int i = 0; i<MAX_BUFF_SIZE; i++)
+	{
+		buff_data_usart[i] = 0;
 	}
 }

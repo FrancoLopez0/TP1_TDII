@@ -4,13 +4,28 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
-../source/L1/Application.c 
+../source/L1/Application.c \
+../source/L1/COM.c \
+../source/L1/COMMUNICATION.c \
+../source/L1/INDICATOR.c \
+../source/L1/TEMP.c \
+../source/L1/TIME.c 
 
 C_DEPS += \
-./source/L1/Application.d 
+./source/L1/Application.d \
+./source/L1/COM.d \
+./source/L1/COMMUNICATION.d \
+./source/L1/INDICATOR.d \
+./source/L1/TEMP.d \
+./source/L1/TIME.d 
 
 OBJS += \
-./source/L1/Application.o 
+./source/L1/Application.o \
+./source/L1/COM.o \
+./source/L1/COMMUNICATION.o \
+./source/L1/INDICATOR.o \
+./source/L1/TEMP.o \
+./source/L1/TIME.o 
 
 
 # Each subdirectory must supply rules for building sources it contributes
@@ -25,7 +40,7 @@ source/L1/%.o: ../source/L1/%.c source/L1/subdir.mk
 clean: clean-source-2f-L1
 
 clean-source-2f-L1:
-	-$(RM) ./source/L1/Application.d ./source/L1/Application.o
+	-$(RM) ./source/L1/Application.d ./source/L1/Application.o ./source/L1/COM.d ./source/L1/COM.o ./source/L1/COMMUNICATION.d ./source/L1/COMMUNICATION.o ./source/L1/INDICATOR.d ./source/L1/INDICATOR.o ./source/L1/TEMP.d ./source/L1/TEMP.o ./source/L1/TIME.d ./source/L1/TIME.o
 
 .PHONY: clean-source-2f-L1
 

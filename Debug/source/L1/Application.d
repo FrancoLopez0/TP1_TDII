@@ -1,6 +1,8 @@
 source/L1/Application.o source/L1/Application.d: \
- ../source/L1/Application.c ../source/L1/Application.h \
- ../source/L1/L2/CONFIG.h D:\codigos\MCU\TDII\TP1\board/board.h \
+ ../source/L1/Application.c \
+ D:\codigos\MCU\TDII\TP1\source/L1/Application.h \
+ D:\codigos\MCU\TDII\TP1\source/L1/L2/CONFIG.h \
+ D:\codigos\MCU\TDII\TP1\board/board.h \
  D:\codigos\MCU\TDII\TP1\board/clock_config.h \
  D:\codigos\MCU\TDII\TP1\drivers/fsl_common.h \
  D:\codigos\MCU\TDII\TP1\device/fsl_device_registers.h \
@@ -24,11 +26,18 @@ source/L1/Application.o source/L1/Application.d: \
  D:\codigos\MCU\TDII\TP1\drivers/fsl_swm.h \
  D:\codigos\MCU\TDII\TP1\drivers/fsl_swm_connections.h \
  D:\codigos\MCU\TDII\TP1\drivers/fsl_power.h \
- D:\codigos\MCU\TDII\TP1\source/MyLibs/DELAY.h ../source/L1/L2/USART.h \
- D:\codigos\MCU\TDII\TP1\drivers/fsl_usart.h ../source/L1/L2/ADC.h \
- D:\codigos\MCU\TDII\TP1\drivers/fsl_adc.h
-../source/L1/Application.h:
-../source/L1/L2/CONFIG.h:
+ D:\codigos\MCU\TDII\TP1\source/MyLibs/DELAY.h \
+ D:\codigos\MCU\TDII\TP1\source/L1/L2/USART.h \
+ D:\codigos\MCU\TDII\TP1\drivers/fsl_usart.h \
+ D:\codigos\MCU\TDII\TP1\source/L1/L2/ADC.h \
+ D:\codigos\MCU\TDII\TP1\drivers/fsl_adc.h \
+ D:\codigos\MCU\TDII\TP1\source/L1/TEMP.h \
+ D:\codigos\MCU\TDII\TP1\source/L1/TIME.h \
+ D:\codigos\MCU\TDII\TP1\source/L1/COMMUNICATION.h \
+ D:\codigos\MCU\TDII\TP1\source/L1/INDICATOR.h \
+ D:\codigos\MCU\TDII\TP1\source/L1/COM.h
+D:\codigos\MCU\TDII\TP1\source/L1/Application.h:
+D:\codigos\MCU\TDII\TP1\source/L1/L2/CONFIG.h:
 D:\codigos\MCU\TDII\TP1\board/board.h:
 D:\codigos\MCU\TDII\TP1\board/clock_config.h:
 D:\codigos\MCU\TDII\TP1\drivers/fsl_common.h:
@@ -54,7 +63,12 @@ D:\codigos\MCU\TDII\TP1\drivers/fsl_swm.h:
 D:\codigos\MCU\TDII\TP1\drivers/fsl_swm_connections.h:
 D:\codigos\MCU\TDII\TP1\drivers/fsl_power.h:
 D:\codigos\MCU\TDII\TP1\source/MyLibs/DELAY.h:
-../source/L1/L2/USART.h:
+D:\codigos\MCU\TDII\TP1\source/L1/L2/USART.h:
 D:\codigos\MCU\TDII\TP1\drivers/fsl_usart.h:
-../source/L1/L2/ADC.h:
+D:\codigos\MCU\TDII\TP1\source/L1/L2/ADC.h:
 D:\codigos\MCU\TDII\TP1\drivers/fsl_adc.h:
+D:\codigos\MCU\TDII\TP1\source/L1/TEMP.h:
+D:\codigos\MCU\TDII\TP1\source/L1/TIME.h:
+D:\codigos\MCU\TDII\TP1\source/L1/COMMUNICATION.h:
+D:\codigos\MCU\TDII\TP1\source/L1/INDICATOR.h:
+D:\codigos\MCU\TDII\TP1\source/L1/COM.h:

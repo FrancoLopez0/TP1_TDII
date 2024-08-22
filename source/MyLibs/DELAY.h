@@ -18,5 +18,7 @@ void SysTick_Handler(void);
 
 void delay_ms(int);
 
+void on_wait_ms(void (*)(), uint32_t );
+
 void SYSTICK_INIT(void);
 #endif /* DELAY_H_ */

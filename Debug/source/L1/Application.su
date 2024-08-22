@@ -1,1 +1,2 @@
-../source/L1/Application.c:11:6:USART_TX	8	static
+../source/L1/Application.c:12:6:APP	8	static
+../source/L1/Application.c:24:6:callback_on_wait	8	static

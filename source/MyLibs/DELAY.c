@@ -22,13 +22,30 @@ volatile uint32_t time;
 void SYSTICK_INIT(void){
 	SysTick_Config(SystemCoreClock/1000);
 	flag_tick = 0;
+	time = 0;
 }
 
 void SysTick_Handler(void){
+	time++;
 	flag_tick++;
 }
 
 void delay_ms(int final){
 	while(flag_tick <= final);
+	flag_tick = 0;
+}
+
+uint32_t execute_and_get_delta_time(void* (callback)()){
+	time = 0;
+
+	callback();
+
+	return time;
+}
+
+void on_wait_ms(void (*callback)(), uint32_t wait_time){
+	while(flag_tick <= wait_time){
+		(*callback)();
+	}
 	flag_tick = 0;
 }

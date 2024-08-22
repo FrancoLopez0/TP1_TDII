@@ -9,18 +9,6 @@
 
 usart_config_t config;
 
-void CONFIG(void){
-	CONFIG_SWM();
-
-	CONFIG_USART();
-
-	SYSTICK_INIT();
-
-	CONFIG_PINS();
-
-	CONFIG_ADC();
-
-}
 
 void CONFIG_SWM(void){
 	CLOCK_EnableClock(kCLOCK_Swm);
@@ -32,11 +20,16 @@ void CONFIG_SWM(void){
 
 void CONFIG_PINS(void){
 	gpio_pin_config_t out_config = {kGPIO_DigitalOutput,1};
+	gpio_pin_config_t in_config = {kGPIO_DigitalInput};
 	GPIO_PortInit(GPIO,1);
+	GPIO_PortInit(GPIO,0);
+
 
 	GPIO_PinInit(GPIO,1,LED_R,&out_config);
 	GPIO_PinInit(GPIO,1,LED_G,&out_config);
 	GPIO_PinInit(GPIO,1,LED_B,&out_config);
+
+	GPIO_PinInit(GPIO,0,CHANGE_UNIT,&in_config);
 
 	GPIO_PinWrite(GPIO, 1, LED_R, 1);
 	GPIO_PinWrite(GPIO, 1, LED_G, 1);
@@ -73,6 +66,24 @@ void INIT(void){
 
 //	ADC_EnableInterrupts(ADC0, kADC_ConvSeqAInterruptEnable);
 //	NVIC_EnableIRQ(ADC0_SEQA_IRQn);
+	usart1_write("Medidor de temperatura\r\n");
 
 }
+
+void CONFIG(void){
+
+	BOARD_BootClockFRO24M();
+
+	CONFIG_SWM();
+
+	CONFIG_USART();
+
+	SYSTICK_INIT();
+
+	CONFIG_PINS();
+
+	CONFIG_ADC();
+
+}
+
 

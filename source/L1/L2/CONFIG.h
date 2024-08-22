@@ -26,6 +26,7 @@
 #define LED_R 2
 #define LED_B 1
 #define LED_G 0
+#define CHANGE_UNIT 4
 
 
 void CONFIG(void);

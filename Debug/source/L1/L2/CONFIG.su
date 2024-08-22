@@ -4,8 +4,8 @@ D:\codigos\MCU\TDII\TP1\drivers/fsl_clock.h:569:20:CLOCK_DisableClock	16	static
 D:\codigos\MCU\TDII\TP1\drivers/fsl_clock.h:580:20:CLOCK_Select	16	static
 D:\codigos\MCU\TDII\TP1\drivers/fsl_gpio.h:153:20:GPIO_PinWrite	24	static
 D:\codigos\MCU\TDII\TP1\drivers/fsl_usart.h:415:20:USART_EnableInterrupts	16	static
-../source/L1/L2/CONFIG.c:12:6:CONFIG	8	static
-../source/L1/L2/CONFIG.c:25:6:CONFIG_SWM	8	static
-../source/L1/L2/CONFIG.c:33:6:CONFIG_PINS	16	static
-../source/L1/L2/CONFIG.c:58:6:CONFIG_USART	8	static
-../source/L1/L2/CONFIG.c:68:6:INIT	8	static
+../source/L1/L2/CONFIG.c:13:6:CONFIG_SWM	8	static
+../source/L1/L2/CONFIG.c:21:6:CONFIG_PINS	16	static
+../source/L1/L2/CONFIG.c:51:6:CONFIG_USART	8	static
+../source/L1/L2/CONFIG.c:61:6:INIT	8	static
+../source/L1/L2/CONFIG.c:73:6:CONFIG	8	static

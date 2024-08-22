@@ -5,14 +5,23 @@
  *      Author: Franco
  */
 
-#include "Application.h"
+#include "L1/Application.h"
 
+bool first_init = false;
 
-void USART_TX(void){
+void APP(void){
+	if(!first_init){
+		RESTART_TIME();
+		first_init = true;
+	}
+	READ_ADC();
+	GET_TEMP(adc_struct.result);
+	LED_TEMP(temp);
+	SEND_TEMP(temp, unity, current_time);
+	on_wait_ms(callback_on_wait, delta_time_seconds * 1000);
+}
 
-	if(flagReceived && counter > 0)
-			{
-				counter = 0;
-				usart1_write(&buff_data_usart[0]);
-			}
+void callback_on_wait(void){
+	USART();
+	CHECK_UNIT();
 }

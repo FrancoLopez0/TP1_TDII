@@ -1,5 +1,4 @@
 D:\codigos\MCU\TDII\TP1\drivers/fsl_usart.h:588:20:USART_WriteByte	16	static
-D:\codigos\MCU\TDII\TP1\drivers/fsl_usart.h:602:23:USART_ReadByte	16	static
 ../source/L1/L2/USART.c:14:6:write_byte	16	static
 ../source/L1/L2/USART.c:20:6:usart1_write	16	static
-../source/L1/L2/USART.c:27:6:USART1_IRQHandler	8	static
+../source/L1/L2/USART.c:29:6:clean_buffer	16	static
