@@ -27,7 +27,8 @@ source/L1/COMMUNICATION.o source/L1/COMMUNICATION.d: \
  D:\codigos\MCU\TDII\TP1\drivers/fsl_power.h \
  D:\codigos\MCU\TDII\TP1\source/MyLibs/DELAY.h ../source/L1/L2/USART.h \
  D:\codigos\MCU\TDII\TP1\drivers/fsl_usart.h ../source/L1/L2/ADC.h \
- D:\codigos\MCU\TDII\TP1\drivers/fsl_adc.h ../source/L1/TIME.h
+ D:\codigos\MCU\TDII\TP1\drivers/fsl_adc.h ../source/L1/TIME.h \
+ ../source/L1/INDICATOR.h
 ../source/L1/COMMUNICATION.h:
 ../source/L1/TEMP.h:
 ../source/L1/L2/CONFIG.h:
@@ -61,3 +62,4 @@ D:\codigos\MCU\TDII\TP1\drivers/fsl_usart.h:
 ../source/L1/L2/ADC.h:
 D:\codigos\MCU\TDII\TP1\drivers/fsl_adc.h:
 ../source/L1/TIME.h:
+../source/L1/INDICATOR.h:

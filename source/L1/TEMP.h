@@ -10,6 +10,7 @@
 
 #include "L2/CONFIG.h"
 #include "TIME.h"
+#include "INDICATOR.h"
 
 enum unit {u_Celsius, u_Fahrenheit , u_Kelvin};
 extern enum unit unity;

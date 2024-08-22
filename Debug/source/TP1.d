@@ -26,8 +26,8 @@ source/TP1.o source/TP1.d: ../source/TP1.c ../source/L1/Application.h \
  D:\codigos\MCU\TDII\TP1\source/MyLibs/DELAY.h ../source/L1/L2/USART.h \
  D:\codigos\MCU\TDII\TP1\drivers/fsl_usart.h ../source/L1/L2/ADC.h \
  D:\codigos\MCU\TDII\TP1\drivers/fsl_adc.h ../source/L1/TEMP.h \
- ../source/L1/TIME.h ../source/L1/COMMUNICATION.h \
- ../source/L1/INDICATOR.h ../source/L1/COM.h ../source/L1/TIME.h
+ ../source/L1/TIME.h ../source/L1/INDICATOR.h \
+ ../source/L1/COMMUNICATION.h ../source/L1/COM.h ../source/L1/TIME.h
 ../source/L1/Application.h:
 ../source/L1/L2/CONFIG.h:
 D:\codigos\MCU\TDII\TP1\board/board.h:
@@ -61,7 +61,7 @@ D:\codigos\MCU\TDII\TP1\drivers/fsl_usart.h:
 D:\codigos\MCU\TDII\TP1\drivers/fsl_adc.h:
 ../source/L1/TEMP.h:
 ../source/L1/TIME.h:
-../source/L1/COMMUNICATION.h:
 ../source/L1/INDICATOR.h:
+../source/L1/COMMUNICATION.h:
 ../source/L1/COM.h:
 ../source/L1/TIME.h:

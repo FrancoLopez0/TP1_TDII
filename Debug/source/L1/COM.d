@@ -25,7 +25,8 @@ source/L1/COM.o source/L1/COM.d: ../source/L1/COM.c ../source/L1/COM.h \
  D:\codigos\MCU\TDII\TP1\drivers/fsl_power.h \
  D:\codigos\MCU\TDII\TP1\source/MyLibs/DELAY.h ../source/L1/L2/USART.h \
  D:\codigos\MCU\TDII\TP1\drivers/fsl_usart.h ../source/L1/L2/ADC.h \
- D:\codigos\MCU\TDII\TP1\drivers/fsl_adc.h ../source/L1/TIME.h
+ D:\codigos\MCU\TDII\TP1\drivers/fsl_adc.h ../source/L1/TIME.h \
+ ../source/L1/INDICATOR.h
 ../source/L1/COM.h:
 ../source/L1/L2/CONFIG.h:
 D:\codigos\MCU\TDII\TP1\board/board.h:
@@ -58,3 +59,4 @@ D:\codigos\MCU\TDII\TP1\drivers/fsl_usart.h:
 ../source/L1/L2/ADC.h:
 D:\codigos\MCU\TDII\TP1\drivers/fsl_adc.h:
 ../source/L1/TIME.h:
+../source/L1/INDICATOR.h:

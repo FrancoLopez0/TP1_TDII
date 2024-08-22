@@ -10,6 +10,8 @@
 
 #include "L2/CONFIG.h"
 
+extern int lim_temp_0, lim_temp_1;
+
 void LED_ON(uint8_t);
 
 void LED_OFF(uint8_t);

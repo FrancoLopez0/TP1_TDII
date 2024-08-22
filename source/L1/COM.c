@@ -29,9 +29,9 @@ uint8_t get_word(char *string, uint8_t finish)
 uint8_t get_number_string(char *value, uint8_t finish)
 {
 	for(int i=0; buffer_data[finish]!=' ' && buffer_data[finish]!=END_CHR; i++){
-		if(buffer_data[finish]<'0' || buffer_data[finish]>'9')
+		if((buffer_data[finish]<'0' || buffer_data[finish]>'9') && buffer_data[finish]!='-')
 		{
-			usart1_write("Error: Value is not unsigned integer number\r\n");
+			usart1_write("Error: Value is not integer number\r\n");
 			return 0;
 		}
 		value[i]=buffer_data[finish];
@@ -40,7 +40,7 @@ uint8_t get_number_string(char *value, uint8_t finish)
 	return finish++;
 }
 
-uint32_t get_num_from_string(char *p){
+uint32_t get_num_from_string_unsigned(char *p){
 
 	uint32_t num = 0;
 	uint8_t len = strlen(p);
@@ -59,10 +59,38 @@ uint32_t get_num_from_string(char *p){
 	return (uint32_t) num;
 }
 
+int get_num_from_string(char *p){
+
+	int sign = 1;
+	int num = 0;
+//	uint8_t c = 0;
+
+
+//	while(p[c] != 0){
+//		len++;
+//		c++;
+//	}
+	if(p[0]=='-')
+	{
+		sign=-1;
+		p++;
+	}
+
+	uint8_t len = strlen(p);
+
+	for(int i = 0; p[i] >=48 && p[i]<=57; i++){
+		num += (p[i]-48) * pow(10, len - i - 1);
+	}
+
+	num *= sign;
+
+	return num;
+}
+
 void action(void){
 	uint8_t finish = 0;
 	char str_to_send[64] = " ";
-	char function[4]=" ";
+	char function[5]=" ";
 	char option[15]= " ";
 	char value[6]= " ";
 
@@ -77,7 +105,7 @@ void action(void){
 
 			if(finish == 0) return;
 
-			uint8_t number = get_num_from_string(value);
+			uint32_t number = get_num_from_string_unsigned(value);
 
 
 			if(number>0)
@@ -90,14 +118,58 @@ void action(void){
 			else
 			{
 				usart1_write("Error: The number must be greater than 0\r\n");
+				return;
 			}
 
+		}
+		else if(strcmp("lim_0", option)==0){
+			finish = get_number_string(value, finish);
+
+			if(finish == 0) return;
+
+			int number = get_num_from_string(value);
+
+			lim_temp_0 = number;
+
+			sprintf(str_to_send, "set %s in %d C\r\n", option, lim_temp_0);
+			usart1_write(str_to_send);
+			return;
+			}
+		else if(strcmp("lim_1", option)==0){
+			finish = get_number_string(value, finish);
+
+			if(finish == 0) return;
+
+			int number = get_num_from_string(value);
+
+			lim_temp_1 = number;
+
+			sprintf(str_to_send, "set %s in %d C\r\n", option, lim_temp_1);
+			usart1_write(str_to_send);
+			return;
 		}
 		else
 		{
 			usart1_write("Error: Unknown option\r\n");
-			return;
 		}
+		}
+	if(strcmp("get", function)==0){
+		finish = get_word(option, finish);
+		if(strcmp("limits", option)==0){
+			sprintf(str_to_send, "limit 0: %d C\r\nlimit 1: %d C\r\n", lim_temp_0, lim_temp_1);
+			usart1_write(str_to_send);
+		}
+		else if(strcmp("time", option)==0){
+			sprintf(str_to_send, "time: %d seconds\r\n", delta_time_seconds);
+			usart1_write(str_to_send);
+		}
+		else
+		{
+			usart1_write("Error: Unknown option\r\n");
+		}
+	}
+	else if(strcmp("help", function)==0){
+		usart1_write("set: \r\n\t-time\r\n\t-lim_0\r\n\t-lim_1 \r\n get: \r\n\t-time\r\n\t-limits\r\n");
 	}
 	else
 	{

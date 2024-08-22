@@ -3,7 +3,8 @@ D:\codigos\MCU\TDII\TP1\drivers/fsl_usart.h:602:23:USART_ReadByte	16	static
 ../source/L1/COM.c:13:6:usart_write_byte	16	static
 ../source/L1/COM.c:19:9:get_word	24	static
 ../source/L1/COM.c:29:9:get_number_string	24	static
-../source/L1/COM.c:43:10:get_num_from_string	40	static
-../source/L1/COM.c:62:6:action	120	static
-../source/L1/COM.c:109:6:USART	8	static
-../source/L1/COM.c:118:6:USART1_IRQHandler	16	static
+../source/L1/COM.c:43:10:get_num_from_string_unsigned	40	static
+../source/L1/COM.c:62:5:get_num_from_string	40	static
+../source/L1/COM.c:90:6:action	136	static
+../source/L1/COM.c:181:6:USART	8	static
+../source/L1/COM.c:190:6:USART1_IRQHandler	16	static

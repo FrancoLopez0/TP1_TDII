@@ -33,8 +33,8 @@ source/L1/Application.o source/L1/Application.d: \
  D:\codigos\MCU\TDII\TP1\drivers/fsl_adc.h \
  D:\codigos\MCU\TDII\TP1\source/L1/TEMP.h \
  D:\codigos\MCU\TDII\TP1\source/L1/TIME.h \
- D:\codigos\MCU\TDII\TP1\source/L1/COMMUNICATION.h \
  D:\codigos\MCU\TDII\TP1\source/L1/INDICATOR.h \
+ D:\codigos\MCU\TDII\TP1\source/L1/COMMUNICATION.h \
  D:\codigos\MCU\TDII\TP1\source/L1/COM.h
 D:\codigos\MCU\TDII\TP1\source/L1/Application.h:
 D:\codigos\MCU\TDII\TP1\source/L1/L2/CONFIG.h:
@@ -69,6 +69,6 @@ D:\codigos\MCU\TDII\TP1\source/L1/L2/ADC.h:
 D:\codigos\MCU\TDII\TP1\drivers/fsl_adc.h:
 D:\codigos\MCU\TDII\TP1\source/L1/TEMP.h:
 D:\codigos\MCU\TDII\TP1\source/L1/TIME.h:
-D:\codigos\MCU\TDII\TP1\source/L1/COMMUNICATION.h:
 D:\codigos\MCU\TDII\TP1\source/L1/INDICATOR.h:
+D:\codigos\MCU\TDII\TP1\source/L1/COMMUNICATION.h:
 D:\codigos\MCU\TDII\TP1\source/L1/COM.h:

@@ -11,6 +11,7 @@
 #include "L2/CONFIG.h"
 #include "string.h"
 #include "TIME.h"
+#include "INDICATOR.h"
 #define MAX_BUFF 15
 #define INIT_CHR 92
 #define END_CHR 13 //   ---'!'=33--- \r = 13
