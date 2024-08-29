@@ -16,10 +16,11 @@ void CHECK_UNIT(void){
 
 		if(unity<3) unity++;
 		if(unity>=3) unity=0;
-		usart1_write("Set unit in");
+		usart1_write("The unit has been set to ");
 		usart1_write((unity==u_Celsius)?" C ":((unity==u_Fahrenheit)?" F ": " K "));
 		usart1_write("\r\n");
-		for(int i=0; i<500000;i++);
+//		for(int i=0; i<500000;i++);
+		delay_ms(200);
 	}
 
 }

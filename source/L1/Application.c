@@ -7,21 +7,26 @@
 
 #include "L1/Application.h"
 
-bool first_init = false;
+bool first_init = true;
+uint32_t last_time = 0;
 
 void APP(void){
-	if(!first_init){
-		RESTART_TIME();
-		first_init = true;
-	}
-	READ_ADC();
-	GET_TEMP(adc_struct.result);
-	LED_TEMP(temp);
-	SEND_TEMP(temp, unity, current_time);
-	on_wait_ms(callback_on_wait, delta_time_seconds * 1000);
-}
 
-void callback_on_wait(void){
+	if(first_init){
+		RESTART_TIME();
+		last_time = time;
+	}
+
+	if((time-last_time)>= delta_time_seconds * 1000 || first_init)
+	{
+		READ_ADC();
+		GET_TEMP(adc_struct.result);
+		LED_TEMP(temp);
+		SEND_TEMP(temp, unity, current_time);
+		last_time = time;
+		first_init = false;
+	}
+
 	USART();
 	CHECK_UNIT();
 }

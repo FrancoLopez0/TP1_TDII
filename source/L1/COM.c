@@ -111,7 +111,7 @@ void action(void){
 			if(number>0)
 			{
 				delta_time_seconds = number;
-				sprintf(str_to_send, "set %s in %d seconds\r\n", option, delta_time_seconds);
+				sprintf(str_to_send, "The interval %s has been set to %d s\r\n", option, delta_time_seconds);
 				usart1_write(str_to_send);
 				return;
 			}
@@ -131,7 +131,7 @@ void action(void){
 
 			lim_temp_0 = number;
 
-			sprintf(str_to_send, "set %s in %d C\r\n", option, lim_temp_0);
+			sprintf(str_to_send, "The %s has been set in %d C\r\n", option, lim_temp_0);
 			usart1_write(str_to_send);
 			return;
 			}
@@ -144,7 +144,7 @@ void action(void){
 
 			lim_temp_1 = number;
 
-			sprintf(str_to_send, "set %s in %d C\r\n", option, lim_temp_1);
+			sprintf(str_to_send, "The %s has been set in %d C\r\n", option, lim_temp_1);
 			usart1_write(str_to_send);
 			return;
 		}

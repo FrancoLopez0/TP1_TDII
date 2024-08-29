@@ -51,3 +51,11 @@ void on_wait_ms(void (*callback)(), uint32_t wait_time){
 	}
 //	flag_tick = 0;
 }
+
+//void on_wait_to_ms(void (*callback)(), uint32_t *var_clk,uint32_t wait_time){
+//	wait_time += time;
+//	while(var_clk <= wait_time){
+//		(*callback)();
+//	}
+////	flag_tick = 0;
+//}
